@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Количество_кратных_чисел
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+                int divider;
+                int quantityDivider = 0;
+                Random rand = new Random();
+                divider = rand.Next(1, 27);
+                Console.WriteLine(divider + " - Число N ");
+                Console.ReadKey();
+                
+                for (int i = 100; i < 1000; i++)
+                {
+                    if (i % divider == 0)
+                    quantityDivider++;
+                }
+            Console.WriteLine(quantityDivider + " - количество натуральных трехзначных чисел кратных " + divider );
+            Console.ReadKey();
+        }
+    }
+}
